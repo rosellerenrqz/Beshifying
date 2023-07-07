@@ -50,8 +50,10 @@ const Input = () => {
 
   return (
     <>
-      <div className="bg-white max-w-4xl mx-auto mt-40 p-7 text-center rounded-xl">
-        <div className="font-bold text-4xl mb-4">🌟 Start Beshifying... 🌟</div>
+      <div className="bg-white mt-40 p-7 text-center rounded-xl mx-auto max-w-xl sm:max-w-1xl md:max-w-2xl lg:max-w-4xl shadow-lg">
+        <div className="font-bold text-xl sm:text-4xl mb-4">
+          🌟 Start Beshifying... 🌟
+        </div>
         <input
           type="text"
           placeholder="Input Beshifying Words"
@@ -80,10 +82,11 @@ const Input = () => {
             </button>
           </div>
         )}
-        <div className="text-base font-medium mt-10 mb-4">
+        <div className="text-sm font-medium mt-10 mb-4 sm:text-base">
           Developed by{" "}
           <a
             href="https://www.facebook.com/enriquez.roseller/"
+            target="blank"
             className="text-blue-700 underline">
             Roseller Enriquez Jr
           </a>
