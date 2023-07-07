@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply box-border;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  @apply bg-indigo-500 m-0 p-0;
+}
