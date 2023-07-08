@@ -31,7 +31,13 @@ const Input = () => {
 
   const copyHandler = () => {
     if (textRef.current) {
-      navigator.clipboard.writeText(textRef.current.innerText);
+      const textToCopy = textRef.current.innerText;
+      const textarea = document.createElement("textarea");
+      textarea.value = textToCopy;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textarea);
       setIsCopied(true);
     }
   };
@@ -50,8 +56,8 @@ const Input = () => {
 
   return (
     <>
-      <div className="bg-white mt-40 p-7 text-center rounded-xl mx-auto max-w-xl sm:max-w-1xl md:max-w-2xl lg:max-w-4xl shadow-lg">
-        <div className="font-bold text-xl sm:text-4xl mb-4">
+      <div className="bg-white mt-40 p-7 text-center rounded-xl mx-auto max-w-sm sm:max-w-1xl md:max-w-2xl lg:max-w-4xl shadow-lg">
+        <div className="font-bold text-2xl sm:text-2xl lg:text-4xl md md:text-2xl mb-4">
           🌟 Start Beshifying... 🌟
         </div>
         <input
